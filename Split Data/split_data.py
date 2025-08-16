@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-housing = pd.read_csv('/Users/abhay/Desktop/Machine Learning/housing.csv')
+housing = pd.read_csv('/Users/abhay/Desktop/Machine Learning/Dataset/housing.csv')
 
 def split_data( data, set_ratio ):
     """
@@ -16,7 +16,7 @@ def split_data( data, set_ratio ):
     train_set_index = random_index[test_set_size:]
     test_set = housing.iloc[test_set_index]
     train_set = housing.iloc[train_set_index]
-    test_set.to_csv('test_set.csv', index=False)
-    train_set.to_csv('train_set.csv', index=False)
+    test_set.to_csv('test_set_2.csv', index=False)
+    train_set.to_csv('train_set_2.csv', index=False)
 
 split_data( housing, 0.2)
