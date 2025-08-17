@@ -15,3 +15,4 @@ attributes = ["median_house_value", "median_income", "total_rooms",
 "housing_median_age"]
 scatter_matrix(housing[attributes], figsize=(12, 8))
 plt.show()
+
