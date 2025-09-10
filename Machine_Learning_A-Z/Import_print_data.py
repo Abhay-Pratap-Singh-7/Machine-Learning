@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 # to import dataset
-dataset = pd.read_csv("location of dataset")
+dataset = pd.read_csv("/Users/abhay/Desktop/Machine Learning/Machine_Learning_A-Z/Data.csv")
 
 # to set x and y variable
 X = dataset.iloc[:, :-1].values # it select all rows and all columns except last column
