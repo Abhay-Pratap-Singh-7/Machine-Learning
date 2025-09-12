@@ -29,3 +29,10 @@ plt.title('Salary vs Exprience')
 plt.xlabel('Salary')
 plt.ylabel('Exprience')
 plt.show()
+
+# to predict result for particular input
+print(regressor.predict([[12]]))
+
+# to get values of coefficients
+print(regressor.coef_)
+print(regressor.intercept_)
