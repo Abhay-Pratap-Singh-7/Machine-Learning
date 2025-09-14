@@ -3,7 +3,7 @@ import numpy as np
 
 from sklearn.impute import SimpleImputer
 
-dataset = pd.read_csv("/Users/abhay/Desktop/Machine Learning/Machine_Learning_A-Z/Data.csv")
+dataset = pd.read_csv("/Users/abhay/Desktop/Machine Learning/Data_preprocessing/Data.csv")
 X = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, -1].values
 
