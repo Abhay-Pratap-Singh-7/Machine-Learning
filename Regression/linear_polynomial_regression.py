@@ -12,7 +12,7 @@ lr.fit(X, y)
 y_pred = lr.predict(X)
 
 from sklearn.preprocessing import PolynomialFeatures
-regressor = PolynomialFeatures(degree=2)
+regressor = PolynomialFeatures(degree=4)
 X_poly = regressor.fit_transform(X)
 lr2 = LinearRegression()
 lr2.fit(X_poly, y)
@@ -25,3 +25,17 @@ plt.title('Truth or Bluff (Linear Regression)')
 plt.xlabel('Position level')
 plt.ylabel('Salary')
 plt.show()  
+
+# for higher resolution and smoother curve
+# X_grid = np.arange(min(X), max(X), 0.1) means creating a vector with a step size of 0.1 and then reshaping it to a column vector
+X_grid = np.arange(min(X), max(X), 0.1)
+X_grid = X_grid.reshape((len(X_grid), 1))
+plt.scatter(X, y, color='red')
+plt.plot(X_grid, lr2.predict(regressor.fit_transform(X_grid)), color='blue')
+plt.title('Truth or Bluff (Polynomial Regression)')
+plt.xlabel('Position level')
+plt.ylabel('Salary')
+plt.show()
+
+print(lr.predict([[6.5]]))
+print(lr2.predict(regressor.fit_transform([[6.5]])))
